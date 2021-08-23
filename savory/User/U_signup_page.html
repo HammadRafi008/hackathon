@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Restaurant_SignUp</title>
+
+    <link rel="stylesheet" href="../Restaurant/login.css">
+    <!-- bootraps -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+    <!-- swetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body style="background-image: url(data:image/jpeg;base64,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);">
+    
+    <div class="container my-5">
+
+
+        <div class="container">
+            <div class="row w-100 d-flex justify-content-center align-items-center maindiv" >
+                <div class="col-12 col-md-5 col-xxl-5 " >
+                    <div class="card py-3 px-2" id="lo">
+                        <div class="row mx-auto">
+                            <i class="fa fa-user" style="font-size:48px;color:red"></i>
+                        </div>
+    
+                        <div class="division">
+                            <div class="row">
+                                <div class="col-6 mx-auto sppp">
+                                    <span class=" fs-2 ">CUSTOMER SIGNUP</span>
+                                </div>
+                            </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Customer Name</label>
+            <input type="username" class="form-control" id="username" placeholder="Customer Name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Country</label>
+            <input type="text" class="form-control" id="Country" placeholder="Enter Country">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">City</label>
+            <input type="text" class="form-control" id="City" placeholder="Enter City">
+        </div>
+        <button onclick="signup()" type="button" class="btn btn-primary">Sing up</button>
+        <a href="../index.html"  type="button" class="btn btn-primary">Back</a>
+
+
+
+
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDR98ZRInhXDoIpiOGvqPCKJYBp_uXPnn4",
+    authDomain: "restaurant-app-846d8.firebaseapp.com",
+    projectId: "restaurant-app-846d8",
+    storageBucket: "restaurant-app-846d8.appspot.com",
+    messagingSenderId: "471724012527",
+    appId: "1:471724012527:web:fecbd0058e22775458bc1a"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+</body>
+<script src="../Restaurant/signup.js"></script>
+</html>
